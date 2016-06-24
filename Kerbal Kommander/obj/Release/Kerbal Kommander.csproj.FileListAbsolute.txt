@@ -1,0 +1,18 @@
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Kerbal Kommander.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Kerbal Kommander.pdb
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Assembly-CSharp.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\KSPUtil.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\UnityEngine.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Assembly-CSharp-firstpass.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\SaveUpgradePipeline.Core.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\TrackIRUnity.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\UnityEngine.UI.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\KSPAssets.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Mono.Cecil.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Vectrosity.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\TDx.TDxInput.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\Mono.Security.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\bin\Release\UnityEngine.xml
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\obj\Release\Kerbal Kommander.dll
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\obj\Release\Kerbal Kommander.pdb
+C:\Users\Romeo\Desktop\git\Kerbal Kommander\Kerbal Kommander\obj\Release\Kerbal Kommander.csprojResolveAssemblyReference.cache
