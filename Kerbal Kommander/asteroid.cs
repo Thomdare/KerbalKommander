@@ -14,14 +14,14 @@ namespace Kerbal_Kommander
         public bool asteroidGUI = false;
 
 
-        [KSPEvent(guiActive = true, guiName = "asteroid", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Asteroid", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void ActivateEvent()
         {
             Events["ActivateEvent"].active = false;
             Events["DeactivateEvent"].active = true;
             asteroidGUI = true;
         }
-        [KSPEvent(guiActive = true, guiName = "close asteroid window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Close Asteroid Window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void DeactivateEvent()
         {
             Events["ActivateEvent"].active = true;

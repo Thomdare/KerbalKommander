@@ -16,14 +16,14 @@ namespace Kerbal_Kommander
         public List<ProtoCrewMember> crewToHire;
 
 
-        [KSPEvent(guiActive = true, guiName = "crew Hire", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Hire Crew", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void ActivateEvent()
         {
             Events["ActivateEvent"].active = false;
             Events["DeactivateEvent"].active = true;
             GenerateCrew();
         }
-        [KSPEvent(guiActive = true, guiName = "close window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Close Window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void DeactivateEvent()
         {
             Events["ActivateEvent"].active = true;
@@ -60,7 +60,7 @@ namespace Kerbal_Kommander
                 else { GUILayout.Label(starFalse); }
                 if (Crew.experienceLevel >= 5) { GUILayout.Label(starTrue); }
                 else { GUILayout.Label(starFalse); }
-                GUILayout.Label("price: " + (Crew.experienceLevel * 10000 + 10000), HighLogic.Skin.label);
+                GUILayout.Label("Price: " + (Crew.experienceLevel * 10000 + 10000), HighLogic.Skin.label);
                 if (GUILayout.Button("Hire", HighLogic.Skin.button))
                 {
                     if (Funding.Instance.Funds < Crew.experienceLevel * 10000 + 10000)
@@ -88,12 +88,12 @@ namespace Kerbal_Kommander
                 }
                 GUILayout.EndHorizontal();
             }
-            if (GUILayout.Button("refresh", HighLogic.Skin.button))
+            if (GUILayout.Button("Refresh", HighLogic.Skin.button))
             {
                 crewToHire.Clear();
                 GenerateCrew();
             }
-            if (GUILayout.Button("close", HighLogic.Skin.button))
+            if (GUILayout.Button("Close", HighLogic.Skin.button))
             {
                 Events["ActivateEvent"].active = true;
                 Events["DeactivateEvent"].active = false;

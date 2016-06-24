@@ -11,7 +11,7 @@ namespace Kerbal_Kommander
         Vector2 scrollPos = new Vector2();
         public bool slaveWindow = false;
         double slavePrice;
-        [KSPEvent(guiActive = true, guiName = "slaves traffic", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Slaves Trafficing", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void ActivateEvent()
         {
             CheckPrice();
@@ -24,7 +24,7 @@ namespace Kerbal_Kommander
         {
             if (slaveWindow == true)
             {
-                GUI.Window(GetInstanceID(), new Rect(5f, 40f, 425, 350), DrawGUISlaves, "Slaves traffic", HighLogic.Skin.window);
+                GUI.Window(GetInstanceID(), new Rect(5f, 40f, 425, 350), DrawGUISlaves, "Slaves Traffic", HighLogic.Skin.window);
             }
         }
 
@@ -32,7 +32,7 @@ namespace Kerbal_Kommander
         {
             GUILayout.BeginVertical();
             GUILayout.BeginHorizontal();
-            GUILayout.Label("Hello ! You want to traffic slaves... Make shure the police don't find out your's traffic...", HighLogic.Skin.label);
+            GUILayout.Label("Hello! You want to traffic slaves? Make sure the police don't find out your are trafficing slaves", HighLogic.Skin.label);
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             GUILayout.Label("Male  " + "      price: " + slavePrice.ToString(), HighLogic.Skin.label);
@@ -40,7 +40,7 @@ namespace Kerbal_Kommander
             {
                 if (Funding.Instance.Funds < 1000)
                 {
-                    ScreenMessages.PostScreenMessage("not enought funds", 5.0f, ScreenMessageStyle.UPPER_CENTER);
+                    ScreenMessages.PostScreenMessage("Not enough funds", 5.0f, ScreenMessageStyle.UPPER_CENTER);
                 }
                 else
                 {
@@ -75,7 +75,7 @@ namespace Kerbal_Kommander
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             GUILayout.Label("Female" + "      price: " + slavePrice.ToString(), HighLogic.Skin.label);
-            if (GUILayout.Button("buy slave", HighLogic.Skin.button))
+            if (GUILayout.Button("Buy Slave", HighLogic.Skin.button))
             {
                 if (Funding.Instance.Funds < 900)
                 {
@@ -104,12 +104,12 @@ namespace Kerbal_Kommander
                             break;
                         }
                     }
-                    ScreenMessages.PostScreenMessage("new slave added (female)", 5.0f, ScreenMessageStyle.UPPER_CENTER);
+                    ScreenMessages.PostScreenMessage("New Slave Added (female)", 5.0f, ScreenMessageStyle.UPPER_CENTER);
                 }
 
             }
             GUILayout.EndHorizontal();
-            GUILayout.Label("Sell slaves:", HighLogic.Skin.label);
+            GUILayout.Label("Sell Slaves:", HighLogic.Skin.label);
 
             scrollPos = GUILayout.BeginScrollView(scrollPos, HighLogic.Skin.scrollView);
             foreach (Part vPart in vessel.Parts)
@@ -119,8 +119,8 @@ namespace Kerbal_Kommander
                     if (slaves.type == ProtoCrewMember.KerbalType.Tourist)
                     {
                         GUILayout.BeginHorizontal();
-                        GUILayout.Label("name: " + slaves.name, HighLogic.Skin.label);
-                        GUILayout.Label("gender: " + slaves.gender.ToString());
+                        GUILayout.Label("Name: " + slaves.name, HighLogic.Skin.label);
+                        GUILayout.Label("Gender: " + slaves.gender.ToString());
                         GUILayout.Label("Price: " + slavePrice.ToString());
                         if (GUILayout.Button("Sell", HighLogic.Skin.button))
                         {
@@ -143,7 +143,7 @@ namespace Kerbal_Kommander
             }
 
             GUILayout.EndScrollView();
-            if (GUILayout.Button("close", HighLogic.Skin.button))
+            if (GUILayout.Button("Close", HighLogic.Skin.button))
             {
                 foreach (Part parts in vessel.Parts)
                 {

@@ -396,7 +396,7 @@ namespace Kerbal_Kommander
 
 
 
-        [KSPEvent(guiActive = true, guiName = "trading", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Trading", guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void ActivateEvent()
         {
             Events["ActivateEvent"].active = false;
@@ -404,7 +404,7 @@ namespace Kerbal_Kommander
             checkPrice();
             SellWindow = true;
         }
-        [KSPEvent(guiActive = true, guiName = "close window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
+        [KSPEvent(guiActive = true, guiName = "Close Window", active = false, guiActiveEditor = false, externalToEVAOnly = false, guiActiveUnfocused = true)]
         public void DeactivateEvent()
         {
             Events["ActivateEvent"].active = true;
@@ -431,7 +431,7 @@ namespace Kerbal_Kommander
             scrollPos = GUILayout.BeginScrollView(scrollPos, HighLogic.Skin.scrollView);
             if (GUILayout.Button("Liquide Fuel", HighLogic.Skin.button))
             {
-                resourceName = "Liquide Fuel";
+                resourceName = "Liquid Fuel";
                 priceBuy = priceLiqFuelB;
                 priceSell = priceLiqFuelS;
                 ResourceID = 374119730;
@@ -591,9 +591,9 @@ namespace Kerbal_Kommander
             GUILayout.Label("price: " + priceBuy, HighLogic.Skin.label);
             float max = Convert.ToSingle(funds / priceBuy);
 
-            GUILayout.Label("quantité: " + BuyResources, HighLogic.Skin.label);
+            GUILayout.Label("Quantity: " + BuyResources, HighLogic.Skin.label);
 
-            GUILayout.Label("prix total: " + BuyResources * priceBuy, HighLogic.Skin.label);
+            GUILayout.Label("Price Total: " + BuyResources * priceBuy, HighLogic.Skin.label);
             if (GUILayout.Button("buy", HighLogic.Skin.button))
             {
                 if (BuyResources * priceBuy <= funds)
@@ -604,7 +604,7 @@ namespace Kerbal_Kommander
                 }
                 else
                 {
-                    ScreenMessages.PostScreenMessage("not enought money !", 5.0f, ScreenMessageStyle.UPPER_CENTER);
+                    ScreenMessages.PostScreenMessage("You Do Not Have Enough Money!", 5.0f, ScreenMessageStyle.UPPER_CENTER);
                 }
                 BuyResources = 0;
             }
@@ -622,11 +622,11 @@ namespace Kerbal_Kommander
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             GUILayout.Label("Sell " + resourceName, HighLogic.Skin.label);
-            GUILayout.Label("price: " + priceSell, HighLogic.Skin.label);
+            GUILayout.Label("Price: " + priceSell, HighLogic.Skin.label);
 
 
-            GUILayout.Label("quantité: " + SellResource, HighLogic.Skin.label);
-            GUILayout.Label("prix total: " + SellResource * priceSell, HighLogic.Skin.label);
+            GUILayout.Label("Quantity: " + SellResource, HighLogic.Skin.label);
+            GUILayout.Label("Price Total: " + SellResource * priceSell, HighLogic.Skin.label);
             if (GUILayout.Button("Sell", HighLogic.Skin.button))
             {
                 if (mass >= SellResource)
